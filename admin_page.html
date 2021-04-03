@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getmeds-Find your medicines</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta http-equiv="x-ua-compitable" content="ig=edge">
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="style.css"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+            @media only screen and (min-device-width: 400px) {
+                  body {
+                    background-image: url('back.png');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                  }
+                  
+                }
+            .btn.btn-delete{
+                  background-color: rgb(124, 27, 27);
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  color: mintcream;
+                  margin-top: -45px;
+                  margin-left: 260px;
+            }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+      <div class="container">
+          <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#Navbar"> 
+               <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="navbar-header">
+            <a class="navbar-brand mr-auto" href="#"><img src="logo.png" height="30" width="41"/></a> 
+          </div>            
+                 <form action="login.php" method="post">
+                  <input type="submit" name="logout" value="logout">
+                </form>
+        </div> 
+
+    </nav><br><br><br><br>
+       <!-- <div class="container">
+         <h2>For Admins only</h2>
+          <form action="admin_page.php" method="post" autocomplete="off">
+            <div class="form-group">
+                  <label><b>Medicine ID:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter Medicine ID" name="med_id" id="med_id" maxlength="7" required>
+            </div>
+            <div class="form-group">
+                  <label><b>Company:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter Company of Medicine" name="company" id="company" required>
+            </div>
+            <div class="form-group">
+                  <label><b>Medicine Name:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter Name of Medicine" name="medicine_name" id="medicine_name" required>
+            </div>
+            <div class="form-group">
+                  <label><b>mg:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter mg of Medicine" name="mg" id="mg">
+            </div>
+            <div class="form-group">
+                  <label><b>available:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter amount of Medicine(Packets)" name="amount" id="amount" required>
+            </div>
+            <div class="form-group">
+                  <label><b>Price:</b></label>
+                  <input type="text" class="form-control w-25" placeholder="Enter Price" name="price" id="price" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add Medicine</button>
+          </form>
+
+          <form action="delete.php" method="POST" autocomplete="off">
+                  <input type="text" class="invisible" name="invisible" id="invisible" value="invisible" hidden>
+                  <button type="submit" class="btn btn-delete">Delete Medicine</button>
+          </form>
+       </div> -->
+       
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>Getmeds-Find your medicines</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta http-equiv="x-ua-compitable" content="ig=edge">
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="style.css"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+	body{
+	background-image: url("backimage.jfif");
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+      <div class="container">
+          <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#Navbar"> 
+               <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="navbar-header">
+            <a class="navbar-brand mr-auto" href="#"><img src="logo.png" height="30" width="41"/></a> 
+          </div>            
+                <div class="collapse navbar-collapse" id="Navbar"> 
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item mr-5"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                     <li class="nav-item mt-0"><a class="nav-link" href="./admin.html"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/admin-settings-male.png"/>Admin</a></li>
+                  </ul>
+                        <span class="navbar-text">
+                            <a href="./login.html"> Login</a>
+                            
+                        </span>
+                 </div>
+        </div> 
+
+    </nav><br><br><br>
+
+      <div class="container">
+        <div class="card w-75" style="">
+           <div class="card-header bg-secondary" style="text-align: center;font-size: 25px;color: white"><b>Sign Up</b></div>
+           <div class="card-body ml-5">
+             <form action="" method="">
+                <div class="form-group">
+                  <label>Username:</label>
+                  <input type="text" class="form-control w-50" placeholder="Enter username" name="username">
+                </div>
+                <div class="form-group">
+                  <label>Email:</label>
+                  <input type="email" class="form-control w-50" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label>Password:</label>
+                  <input type="password" class="form-control w-50" placeholder="Enter password" name="password">
+                </div>
+                <div class="form-group">
+                  <label> Confirm Password:</label>
+                  <input type="password" class="form-control w-50" placeholder="Confirm password" name="Confirmpassword">
+                </div>
+                <div class="form-group">
+                   <label for="comment">Address:</label>
+                    <textarea class="form-control w-50" rows="2"  name="address"></textarea>
+                </div>
+               <button type="submit" class="btn btn-success">Sign Up</button>
+              </form>
+           </div> 
+           <div class="text-muted ml-5">
+                <h6>Already have an account? <a href="./login.html">Log in</a></h6>
+              </div>
+        </div>
+              
+      </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="cities.js"></script>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta http-equiv="x-ua-compitable" content="ig=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="style.css"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+  <style type="text/css">
+  @media only screen and (min-device-width: 400px) {
+    body {
+      background-image: url('back.png');
+      background-size: cover;
+      height: 100%;
+      background-position: center 0;
+      background-repeat: no-repeat;
+      font-size: 15px;
+    }
+  }
+
+  .container h3
+  {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  label{
+    margin-bottom: 25px;
+  }
+
+  .signup {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  
+  .footer
+{
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: 380px;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+h1 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50px);
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 10em;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 5px 10px rgba(0,0,0,1);
+	mix-blend-mode: overlay;
+	font-family: 'Roboto Slab', serif;
+	box-shadow: 0 5px 10px rgba(0,0,0,1);
+	text-decoration: none;
+}
+.w3hubs-footer{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background:#272727;
+	padding: 20px 0px;
+	
+}
+.w3hubs-icon{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-icon ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.w3hubs-icon ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#272727; 
+}
+.w3hubs-icon ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-icon ul li a i{
+	line-height: 50px;
+}
+.w3hubs-icon ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-icon ul li a:hover >i{
+	transform: scale(1.6) rotate(25deg);
+}
+.w3hubs-nav{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+.w3hubs-nav ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav ul li{
+	display: inline-block;
+	margin: 10px 20px;	 
+}
+.w3hubs-nav ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav ul li a:hover{
+	color:  #e67e22;
+}
+
+.w3hubs-nav1{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 15px;
+}
+.w3hubs-nav1 ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+.w3hubs-nav1 ul li{
+	display: inline-block;
+	margin: 0px 20px;	 
+}
+.w3hubs-nav1 ul li a{
+	text-decoration: none;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.w3hubs-nav1 ul li a:hover{
+	color:  #e67e22;
+}
+.w3hubs-nav2{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.w3hubs-nav2 ul{
+	
+	text-align: center;
+}
+
+.w3hubs-nav2 ul li{
+	
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+	background:#fff; 
+}
+.w3hubs-nav2 ul li a{
+	text-decoration: none;
+	color: #272727;
+	font-size: 25px;
+	display: block;
+}
+.w3hubs-nav2 ul li a i{
+	line-height: 50px;
+}
+.w3hubs-nav2 ul li:hover{
+	background: #e67e22;
+}
+.w3hubs-nav2 ul li a:hover >i{
+	transform: scale(1.6) rotate(180deg);
+}
+.footer-end{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: #7DCEA0;
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	text-align: center;
+}
+.footer-end p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	text-align: center;
+	color: rgb(6, 12, 24);
+	font-weight: bold;
+	letter-spacing: 2px;
+
+}
+.footer-end a{
+
+text-decoration: none;
+color: #fff
+}
+.footer-end a:hover{
+	color:  #e67e22;
+}
+
+@media(max-width:691px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 16px;
+}
+}
+@media(max-width:604px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 14px;
+}
+.w3hubs-nav ul li{
+	padding: 0px ;
+}
+}
+@media(max-width:559px ){
+
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 13px;
+}
+
+}
+@media(max-width:539px ){
+.w3hubs-nav1 ul li a,.w3hubs-nav ul li a{
+	font-size: 11px;
+}
+.w3hubs-nav ul li{
+	margin: 5px 20px;
+}
+.w3hubs-nav ul li.p1 {
+    padding-top: 10px;
+}
+}
+@media(max-width:380px ){
+	.w3hubs-nav ul li,.w3hubs-nav1 ul li{
+		display: block;
+		padding: 5px;
+	}
+.w3hubs-nav2 ul li{
+	display: none;
+}
+.w3hubs-icon ul li a i {
+    line-height: 38px;
+}
+.w3hubs-icon ul li a{
+	font-size: 20px;
+}
+.w3hubs-icon ul li{
+width: 40px;
+    height: 40px;
+}
+}
+@media(max-width: 375px){
+	.w3hubs-nav ul li.p1 {
+    padding-top: 0px;
+}
+}
+
+select {
+  min-width: 200px;
+  width: auto;
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+      <div class="container1">
+          <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#Navbar"> 
+               <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="navbar-header">
+            <a class="navbar-brand mr-auto" href="index.html"><img src="logo.png" height="30" width="41"/></a> 
+          </div>            
+                <div class="collapse navbar-collapse" id="Navbar"> 
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item mr-5"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                     <li class="nav-item mt-0"><a class="nav-link" href="./admin.html"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/admin-settings-male.png"/>Admin</a></li>
+                  </ul>
+                        <span class="navbar-text">
+                            <a href="./login.html"> Login</a>
+                            
+                        </span>
+                 </div>
+        </div> 
+
+    </nav><br><br><br>
+    <!-- User Details DB Fields:
+    ID
+    Username
+    Password
+    Firstname
+    Lastname
+    Phone Code
+    Phone
+    Email
+    Address Lane 1: Building/House No./Name
+    Address Lane 2: Area
+    City
+    Pin Code
+    State
+    Country
+    Medicines Requirements: Frequently, Once in a Month, A few times, Rarely    
+    Timestamp -->
+
+    <div class="container" style="margin: 0 auto; margin-left:auto; margin-right:auto;">
+
+        <br><br>
+        <h3>Fill in!</h3>
+        <br>
+        <form class="signup" action="signup.php" method="post" autocomplete="off">
+
+            <div>
+            <label for="firstname" class="l_firstname" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>First Name:</b></label>
+            <input type="text" class="firstname" name="firstname" id="firstname" placeholder="Enter your First Name *" required>            
+            </div>
+
+            <div>
+            <label for="lastname" class="l_lastname" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Last Name:</b></label>
+            <input type="text" class="lastname" name="lastname" id="lastname" placeholder="Enter your Last Name *" required>
+            </div>
+
+            <div>
+            <label for="username" class="l_username" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Username:</b></label>
+            <input type="text" class="username" name="username" id="username" placeholder="Enter your Username *" maxlength="20" required>
+            </div>
+            
+            <div>
+            <label for="password" class="l_password" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Password:</b></label>
+            <input type="password" class="password" name="password" id="password" placeholder="Enter your Password *" maxlength="11" required>
+            </div>
+            
+            <div>
+            <label for="pcode" class="l_pcode" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Phone Code:</b></label>
+            <input type="text" class="pcode" name="pcode" id="pcode" style="width: 70px" placeholder="          *" maxlength="5", required>
+            </div>
+            
+            <div>
+            <label for="phone" class="l_phone" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Phone No.:</b></label>
+            <input type="phone" class="phone" name="phone" id="phone" placeholder="Enter your Phone No. *" minlength= "10" maxlength="11" required>
+            </div>
+            
+            <div>
+            <label for="email" class="l_email" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Email ID:</b></label>
+            <input type="email" class="email" name="email" id="email" placeholder="Enter your Email ID *" maxlength="50" required>
+            </div>
+            
+            <div>
+            <label for="house" class="l_house" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Building/House No.:</b></label>
+            <input type="text" class="house" name="house" id="house" placeholder="Building/House No./Name *" maxlength="20" required>
+            </div>
+            
+            <div>
+            <label for="area" class="l_area" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Area of Residence:</b></label>
+            <input type="text" class="area" name="area" id="area" style="width:300px" placeholder="Enter your Area of Residence *" maxlength="100" required>    
+            </div>
+
+
+            <div>
+            <label for="state" class="l_state" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Select State:</b></label>
+            <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control w-25" style="margin-bottom: 20px; max-width: 90%;" required>
+            </select>
+            </div>
+
+            <div>
+            <label for="city" class="l_city" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Select City:</b></label>
+            <select id ="state" name="city" class="form-control w-25" style="margin-bottom:20px; max-width: 90%;" required>
+            </select>
+            </div>
+
+            <script language="javascript">print_state("sts");</script>
+            
+            <div>
+            <label for="pincode" class="l_pincode" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Pin Code:</b></label>
+            <input type="text" class="pincode" name="pincode" id="pincode" placeholder="Enter your Pin Code *" maxlength="7" required>
+            </div>
+            
+            <div>
+            <label for="req" style="margin-right: 20px;" style="margin-bottom: 5px;"><b>Medical Requirements:</b></label>
+            <select name="req" id="req" class="req">
+                <option value="frequently">Frequently</option>
+                <option value="monthly">Once in a Month</option>
+                <option value="few">A few times</option>
+                <option value="rarely">Rarely</option>
+            </select>
+            </div>
+            <button type="submit" class="btn btn-success" style="margin-bottom: 10px;">Sign Up</button>
+            <div style="margin-bottom: 25px;">
+              <h6><b style="color:black">Already have an account? </b><a href="./login.html" style="color:blue;"><b>Log in</b></a></h6>
+            </div>
+          </form>
+    </div>
+
+    <footer class="footer">
+      <div class="w3hubs-footer">
+     
+        <div class="w3hubs-icon">
+          <ul>
+            <li><a href="https://www.instagram.com/shubham.rangate.15/" target="black"><img src="instagram.png" width="50" height="50"></a></li>
+            <li><a href="https://www.linkedin.com/in/sujay-rittikar-296950128/" target="black"><img src="linkedin.png" width="50" height="50"></a></li>
+          </ul>
+        </div>
+        <div class="w3hubs-nav">
+          <ul>
+            <li class="p1"><a href="mailto:suj00rit20@gmail.com">Contact Us</a></li>
+            <li style="color: white;">+91 8600973045</li>
+          </ul>
+          </div>
+ 
+        <div class="w3hubs-nav2">
+          <ul>
+            
+              <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+            
+          </ul>
+        </div>
+    </div>
+ 
+    <div class="footer-end">
+        <p>Developed by: Sujay Rittikar and Designed by: Shubham Rangate</p>
+    </div>
+    </footer>
+</body>
+</html>
