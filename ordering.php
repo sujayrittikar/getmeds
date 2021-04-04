@@ -3,21 +3,13 @@
     {
         session_start();
        
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-
-        if(!$con)
-        {
-            die("Connection to this database failed due to ".mysqli_connect_error());
-        }
+        require 'db.php';
 
         $order = $_POST['orders'];
         $price = $_POST['prices'];
         $username = $_SESSION['username'];
 
-        $sql = "SELECT phone FROM `pharmaz`.`users` WHERE username='$username';";
+        $sql = "SELECT phone FROM `epiz_28304119_pharmaz`.`users` WHERE username='$username';";
         if($con->query($sql)==true)
         {
             $result = $con->query($sql);
