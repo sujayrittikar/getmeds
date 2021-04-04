@@ -1,8 +1,8 @@
 # getmeds
 GetMeds is a Pharmacy E-Commerce like website where in, there are following options:
-i. Signup for User
-ii. Login for User
-iii. Medicines Searching for Users
-iv. Order sections (yet to be updated with the Payment Gateways Integration and Messaging Channel)
-v. Admin Login
-vi. Admin functions: Add Medicines, Modify Medicines and Delete Medicines
+1. Signup for User
+2. Login for User
+3. Medicines Searching for Users
+4. Order sections (yet to be updated with the Payment Gateways Integration and Messaging Channel)
+5. Admin Login
+6. Admin functions: Add Medicines, Modify Medicines and Delete Medicines
