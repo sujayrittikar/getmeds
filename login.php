@@ -11,19 +11,11 @@
 
         if(isset($_POST['username']))
         {        
-            $server = "localhost";
-            $username = "root";
-            $password = "";
-            $con = mysqli_connect($server, $username, $password);
-
-            if(!$con)
-            {
-                die("Connection to this database failed due to ".mysqli_connect_error());
-            }
+            require 'db.php';
 
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $sql = "SELECT `password` FROM `pharmaz`.`users` WHERE username='$username';";
+            $sql = "SELECT `password` FROM `epiz_28304119_pharmaz`.`users` WHERE username='$username';";
 
             if($con->query($sql)==true)
             {
