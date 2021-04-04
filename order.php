@@ -1,14 +1,7 @@
 <?php
     if(isset($_POST['0']))
     {
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to ".mysqli_connect_error());
-        }
+        require 'db.php';
         $total_items = $_POST['order'];
         $total_items = (int)$total_items;
         $temp = $total_items-1;
