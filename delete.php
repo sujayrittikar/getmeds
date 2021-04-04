@@ -1,14 +1,7 @@
 <?php
     if(isset($_POST['invisible']))
     {
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to".mysqli_connect_error());
-        }
+        require 'db.php';
 
         $invisible = $_POST['invisible'];
         echo file_get_contents('admin_page.html');
@@ -30,16 +23,9 @@
 
     if(isset($_POST['medicine_name']))
     {
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to".mysqli_connect_error());
-        }
+        require 'db.php';
         $medicine = $_POST['medicine_name'];
-        $sql = "SELECT * FROM `pharmaz`.`medicines` WHERE med_name like '%$medicine%';";
+        $sql = "SELECT * FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_name like '%$medicine%';";
 
         if($con->query($sql)==true)
         {
@@ -190,17 +176,10 @@
 
     if(isset($_POST['medicine_id']))
     {
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to".mysqli_connect_error());
-        }
+        require 'db.php';
         $medicine_id = $_POST['medicine_id'];
         $quantity = $_POST['quantity'];
-        $sqltest = "SELECT `available` FROM `pharmaz`.`medicines` WHERE med_id=$medicine_id;";
+        $sqltest = "SELECT `available` FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$medicine_id;";
         $resultcheck = $con->query($sqltest);
         $rowtest = $resultcheck->fetch_assoc();
         $available = $rowtest['available'];
@@ -208,7 +187,7 @@
         {    
             if($available>=$quantity)
             {
-                $sqlupdate = "UPDATE `pharmaz`.`medicines`
+                $sqlupdate = "UPDATE `epiz_28304119_pharmaz`.`medicines`
                 SET `available` = $available-$quantity WHERE med_id=$medicine_id;";
                 if($con->query($sqlupdate)==true)
                 {
