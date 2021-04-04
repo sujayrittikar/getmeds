@@ -1,14 +1,7 @@
 <?php
         if(isset($_POST['med_id']))
         {
-            $server = "localhost";
-            $username = "root";
-            $password = "";
-            $con = mysqli_connect($server, $username, $password);
-            if(!$con)
-            {
-                die("Connection to this database failed due to ".mysqli_connect_error());
-            }
+            require 'db.php';
 
             $med_id = $_POST['med_id'];
             $company = $_POST['company'];
@@ -17,7 +10,7 @@
             $amount = $_POST['amount'];
             $price = $_POST['price'];
 
-            $sqlcheck1 = "SELECT `med_id` FROM  `pharmaz`.`medicines` WHERE med_id=$med_id;";
+            $sqlcheck1 = "SELECT `med_id` FROM  `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$med_id;";
 
             if (strlen(strval($med_id))<8)
             {
@@ -27,19 +20,19 @@
                     $resultcheck1 = $con->query($sqlcheck1);
                     if($resultcheck1->num_rows>0)
                     {
-                        $sqlcheck5 = "SELECT `med_name` FROM `pharmaz`.`medicines` WHERE med_id=$med_id;";
-                        $sqlcheck2 = "SELECT `mg` FROM `pharmaz`.`medicines` WHERE med_id=$med_id;";
+                        $sqlcheck5 = "SELECT `med_name` FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$med_id;";
+                        $sqlcheck2 = "SELECT `mg` FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$med_id;";
                         $resultcheck5 = $con->query($sqlcheck5);
                         $resultcheck2 = $con->query($sqlcheck2);
                         $row2 = $resultcheck2->fetch_assoc();
                         $row5 = $resultcheck5->fetch_assoc();
                         if ($row2['mg']==$mg && strcmp($row5['med_name'],$medicine_name)==0)
                         {
-                            $sqlcheck3 = "SELECT `available` FROM `pharmaz`.`medicines` WHERE med_id=$med_id;";
+                            $sqlcheck3 = "SELECT `available` FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$med_id;";
                             $resultcheck3 = $con->query($sqlcheck3);
                             $row3 = $resultcheck3->fetch_assoc();
                             $available = $row3['available'];
-                            $sqlupdate = "UPDATE `pharmaz`.`medicines`
+                            $sqlupdate = "UPDATE `epiz_28304119_pharmaz`.`medicines`
                             SET `available` = $available+$amount, `price`=$price WHERE med_id=$med_id;";
                             if($con->query($sqlupdate)==true)
                             {
@@ -135,7 +128,7 @@
                             $k=0;
                             while ($k==0)
                             {
-                                $sqlcheck4 = "SELECT * FROM `pharmaz`.`medicines` WHERE med_id=$index;";
+                                $sqlcheck4 = "SELECT * FROM `epiz_28304119_pharmaz`.`medicines` WHERE med_id=$index;";
                                 $resultcheck4 = $con->query($sqlcheck4);
                                 if ($resultcheck4->num_rows==0)
                                 {
@@ -144,7 +137,7 @@
                                 }
                                 $index++;
                             }
-                            $sqlnew = "INSERT INTO `pharmaz`.`medicines` (`med_id`, `company`, `med_name`, `mg`, `available`, `price`, `time`) 
+                            $sqlnew = "INSERT INTO `epiz_28304119_pharmaz`.`medicines` (`med_id`, `company`, `med_name`, `mg`, `available`, `price`, `time`) 
                             VALUES ('$index', '$company', '$medicine_name', '$mg', '$amount', '$price', current_timestamp());";
                             if($con->query($sqlnew)==true)
                             {
@@ -195,7 +188,7 @@
                     }
                     else
                     {
-                        $sql = "INSERT INTO `pharmaz`.`medicines` (`med_id`, `company`, `med_name`, `mg`, `available`, `price`, `time`) 
+                        $sql = "INSERT INTO `epiz_28304119_pharmaz`.`medicines` (`med_id`, `company`, `med_name`, `mg`, `available`, `price`, `time`) 
                         VALUES ('$med_id', '$company', '$medicine_name', '$mg', '$amount', '$price', current_timestamp());";
                         if ($con->query($sql)==true)
                         {
