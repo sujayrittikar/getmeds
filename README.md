@@ -8,3 +8,5 @@ Try the website at: http://getmeds.epizy.com (Temporarily hosted, has limits. So
 4. Order sections (yet to be updated with the Payment Gateways Integration and Messaging Channel)
 5. Admin Login
 6. Admin functions: Add Medicines, Modify Medicines and Delete Medicines
+
+Working Video: https://www.youtube.com/watch?v=vkyYv65psG0
