@@ -1,14 +1,7 @@
 <?php 
     if(isset($_POST['username']))
     {
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to ".mysqli_connect_error());
-        }
+        require 'db.php';
 
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
@@ -35,7 +28,7 @@
 
         else
         {
-          $sqltest = "SELECT `username` FROM `pharmaz`.`users` WHERE username='$username'";
+          $sqltest = "SELECT `username` FROM `epiz_28304119_pharmaz`.`users` WHERE username='$username'";
           if($con->query($sqltest)==true)
           {
             $resulttest = $con->query($sqltest);
@@ -46,7 +39,7 @@
             }
             else
             {
-              $sql = "INSERT INTO `pharmaz`.`users` (`username`, `password`, `firstname`, `lastname`, `phone_code`, `phone`, `email`, `house`, `area`, `city`, `pin_code`, `state`, `country`, `req`, `time`) VALUES 
+              $sql = "INSERT INTO `epiz_28304119_pharmaz`.`users` (`username`, `password`, `firstname`, `lastname`, `phone_code`, `phone`, `email`, `house`, `area`, `city`, `pin_code`, `state`, `country`, `req`, `time`) VALUES 
               ('$username', '$password', '$firstname', '$lastname', '$pcode', '$phone', '$email', '$house', '$area', '$city', '$pincode', '$state', '$country', '$req', current_timestamp());";
               if ($con->query($sql)==true)
               { 
