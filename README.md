@@ -1,6 +1,6 @@
 # getmeds
 GetMeds is a Pharmacy E-Commerce like website where in, there are following options:
-Try the website at: http://getmeds.epizy.com
+Try the website at: http://getmeds.epizy.com (Temporarily hosted, has limits. So don't expect to see it always.)
 
 1. Signup for User
 2. Login for User
