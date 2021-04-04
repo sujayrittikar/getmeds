@@ -2,15 +2,7 @@
     if(isset($_POST['password'])||isset($_POST['logout']))
     {
         session_start();
-        $server = "localhost";
-        $username = "root";
-        $password = "";
-        $con = mysqli_connect($server, $username, $password);
-        if(!$con)
-        {
-            die("Connection to this database failed due to ".mysqli_connect_error());
-        }
-
+        require 'db.php';
         if(isset($_POST['logout']))
         {
             header("Location: index.html");
