@@ -34,7 +34,7 @@
   }
   .container
   {
-    margin-top: 250px;
+    margin-top: 100px;
   }
 }
 
@@ -52,7 +52,7 @@
   clear: both;
   position: relative;
   height: 200px;
-  margin-top: 580px;
+  margin-top: 380px;
 }
 
 *{
@@ -103,11 +103,11 @@ h1 {
 	height: 50px;
 	margin: 0px 10px;
 	border-radius: 100%;
-	/*background:#272727;*/ 
+	background:#272727; 
 }
 .w3hubs-icon ul li a{
 	text-decoration: none;
-	/*color: #272727;*/
+	color: #272727;
 	font-size: 25px;
 	display: block;
 }
@@ -209,7 +209,7 @@ h1 {
 	line-height: 50px;
 }
 .w3hubs-nav2 ul li:hover{
-	/*background: #e67e22;*/
+	background: #e67e22;
 }
 .w3hubs-nav2 ul li a:hover >i{
 	transform: scale(1.6) rotate(180deg);
@@ -281,7 +281,7 @@ color: #fff
 .w3hubs-nav2 ul li{
 	display: none;
 }
-/*.w3hubs-icon ul li a i {
+.w3hubs-icon ul li a i {
     line-height: 38px;
 }
 .w3hubs-icon ul li a{
@@ -290,10 +290,15 @@ color: #fff
 .w3hubs-icon ul li{
 width: 40px;
     height: 40px;
-}*/
-
 }
-.btn:hover{
+}
+@media(max-width: 375px){
+	.w3hubs-nav ul li.p1 {
+    padding-top: 0px;
+}
+}
+ 
+ .btn:hover{
   transform:scale(1.3);
   color: #f1f1f1;
   background: #3498db;
@@ -304,45 +309,32 @@ width: 40px;
 	top:-10%;
 	left: -10%
 }
-@keyframes aaa{
-	0%{
-		left: -110%;
-		top: 90%;
-	}
-	50%{
-		left: 10%;
-		top: -30%;
-	}
-	100%{
-		top: -10%;
-        left: -10%
-	}
-}
-@media(max-width: 375px){
-	.w3hubs-nav ul li.p1 {
-    padding-top: 0px;
-}
-}
+
+
+
 </style>
 </head>
-
 <body>
-
-	<nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
-		<div class="container1">
-			<button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#Navbar"> 
-				 <span class="navbar-toggler-icon"></span>
-			</button> 
-			<div class="navbar-header">
-			  <a class="navbar-brand mr-auto" href="#"><img src="logo.png" height="30" width="41"/></a> 
-			</div>            
-					   <!--<li class="nav-item active mr-5"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>-->
-					   <a class="nav-link" href="./index.html" style="color: white;"><span class="fa fa-home fa-lg"></span> Home</a>
-					   <a href="./admin.html" style="color: white;"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/admin-settings-male.png"/>Admin</a>
-					   <a href="signup.html" style="color: white;"> Sign Up</a>
-						  
-		  </div>
-
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+      <div class="container1">
+          <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#Navbar"> 
+               <span class="navbar-toggler-icon"></span>
+          </button> 
+          <!--<div class="navbar-header">
+            <a class="navbar-brand mr-auto" href="index.html"><img src="logo.png" height="30" width="41"/></a> 
+          </div> -->           
+                <div class="collapse navbar-collapse" id="Navbar"> 
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item  mr-5"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                     <li class="nav-item mt-0"><a class="nav-link mr-3" href="./admin.html"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/admin-settings-male.png"/>Admin</a></li>
+                  </ul>
+                        <span class="navbar-text">
+                            
+                            <a href="signup.html">Sign Up</a>
+                        </span>
+                        
+                 </div>
+        </div> 
 
     </nav><br><br><br>
 
@@ -397,8 +389,6 @@ width: 40px;
               
             </ul>
           </div>
-          
-       </div>
       </div>
    
       <div class="footer-end">
